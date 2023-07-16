@@ -39,6 +39,16 @@ https://templatemo.com/tm-548-training-studio
     </style>
   </head>
   <script>
+      function checkTextarea() {
+    var textarea = document.getElementById('pesanBox');
+    var button = document.getElementById('playButton');
+
+    if (textarea.value.trim() !== '') {
+      button.disabled = false;
+    } else {
+      button.disabled = true;
+    }
+  }
     function redirectBack() {
       var newTab = window.open(href="klaimhadiah.html", "_blank");
       newTab.focus();
@@ -93,9 +103,10 @@ https://templatemo.com/tm-548-training-studio
           border: 1.5px solid #ccc; /* Border saat tidak dipilih */
         "
         onblur="this.style.border='1.5px solid #ccc';"
+        oninput="checkTextarea()"
       ></textarea>
-  
-      <button type="submit" style="margin-bottom: 11px" id="playButton" class="primary" onclick="redirectBack()">
+    
+      <button type="submit" style="margin-bottom: 11px" id="playButton" class="primary" onclick="redirectBack()" disabled>
         Klaim Hadiah
       </button>
     </form>
