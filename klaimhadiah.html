@@ -31,7 +31,7 @@
       .status-image {
         text-align: center;
         opacity: 0;
-        transition: opacity 1.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
       }
    
       .status.animate .status-image {
@@ -41,93 +41,14 @@
   </head>
   
   <body>
-    <div class="container">
-      <div class="send" style="filter: url('#goo')">
-        <div class="send-indicator">
-          <div
-            class="send-indicator-dot"
-            style="transform: matrix(0.8, 0, 0, 0.8, 0, 0)"
-          ></div>
-          <div
-            class="send-indicator-dot"
-            style="transform: matrix(0.85, 0, 0, 0.85, 0, 0)"
-          ></div>
-          <div
-            class="send-indicator-dot"
-            style="transform: matrix(0.9, 0, 0, 0.9, 0, 0)"
-          ></div>
-          <div
-            class="send-indicator-dot"
-            style="transform: matrix(0.7, 0, 0, 0.7, 0, 0)"
-          ></div>
-        </div>
-        <button class="send-button" style="transform: matrix(1, 0, 0, 1, 0, 0)">
-          <div class="sent-bg" style="opacity: 0"></div>
-          <i
-            class="fa fa-send send-icon"
-            style="
-              transform: matrix(1, 0, 0, 1, 0, 0);
-              display: inline-block;
-              opacity: 1;
-            "
-          ></i>
-          <i
-            class="fa fa-check sent-icon"
-            style="
-              opacity: 0;
-              display: none;
-              transform: matrix(1, 0, 0, 1, 0, 0);
-            "
-          ></i>
-        </button>
-      </div>
-
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-        width="800"
-        id="svg-goo-filter"
-      >
-        <defs>
-          <filter id="goo">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="10"
-              result="blur"
-            ></feGaussianBlur>
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-              result="goo"
-            ></feColorMatrix>
-            <feComposite
-              in="SourceGraphic"
-              in2="goo"
-              operator="atop"
-            ></feComposite>
-          </filter>
-          <filter id="goo-no-comp">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="10"
-              result="blur"
-            ></feGaussianBlur>
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-              result="goo"
-            ></feColorMatrix>
-          </filter>
-        </defs>
-      </svg>
-    </div>
+    
+        
+      
     <body>
       <div class="container">
         <div class="status">
           <div class="status-text">
-            <center>Tunggu ayang, hadiah sedang dikirim...</center>
+            <center></center>
           </div>
           <div class="status-image">
             <img src="images/hadiahshpy.jpg" alt="Gambar Hadiah" />
@@ -173,7 +94,7 @@
   var statusText = document.querySelector(".status-text center");
   statusText.textContent = "Hadiah sudah terkirim ayang";
   statusContainer.classList.add("animate");
-}, 24000);
+}, 0);
       });
     </script>
     <script>
@@ -184,10 +105,10 @@
           var statusText = document.createElement("div");
           statusText.className = "status-text";
           statusText.innerHTML =
-            "<center>Maaf yah ayang ga bisa ngasi apa-apa selain ini, ayang bisa belanjain sesuai kebutuhan ayang</center>";
+            "<center></center>";
           statusContainer.appendChild(statusText);
           statusText.classList.add("animate");
-        }, 25000);
+        }, 0);
       });
     </script>
     
