@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  --time: 10s;
+}
+
+.scene {
+  width: 100w;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sky,
+.ocean {
+  width: 100%;
+  height: 50%;
+}
+
+.sky {
+  background-color: #bd4f6c;
+  background-image: radial-gradient(circle at right, #bd4f6c, #d7816a);
+  background-size: 400% 400%;
+  position: relative;
+  -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  animation: sky var(--time) ease infinite;
+}
+
+.ocean {
+  background-color: #a4508b;
+  background-image: radial-gradient(circle at center, #522343 0%, #3d0557 74%);
+}
+
+.text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.88em;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 20%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 300;
+  white-space: pre-wrap;
+  max-width: 400px; /* Sesuaikan dengan lebar maksimum yang diinginkan */
+  visibility: hidden;
+  opacity: 0;
+  animation: slideInFromTop 3s ease forwards;
+  animation-delay: 2s; /* Delay selama 3 detik */
+}
+
+.text2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.88em;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 300;
+  white-space: pre-wrap;
+  max-width: 400px; /* Sesuaikan dengan lebar maksimum yang diinginkan */
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 13s; /* Delay selama 3 detik */
+}
+
+@keyframes slideInFromTop {
+  0% {
+    top: -100px;
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    top: 20%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.sun {
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  background-color: #a40606;
+  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+  transform: translateY(20%);
+  animation: set var(--time) ease infinite;
+  box-shadow: 0 0 210px 100px rgba(253, 143, 54, 0.6),
+    0 0 210px 200px rgba(251, 167, 98, 0.781);
+}
+
+.star {
+  width: 0.3em;
+  height: 0.3em;
+  background-color: white;
+  z-index: -1;
+  border-radius: 50%;
+  animation: stars var(--time) infinite;
+  position: absolute;
+}
+
+@keyframes set {
+  0%,
+  100% {
+    transform: translate(0, 100%);
+  }
+  60% {
+    transform: translate(0, -30%);
+  }
+  40% {
+    transform: translate(0, -30%);
+  }
+}
+
+@keyframes sky {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 400%;
+  }
+}
+
+@keyframes stars {
+  0% {
+    opacity: 100%;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0%;
+    transform: translate(-400px, -300px);
+  }
+}
+
+.btn-sunset {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  background-color: #ff8c00;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 10px 19px;
+  border: none;
+  border-radius: 28px;
+  font-size: 0.82em;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  left: 5.1%;
+  transform: translateX(-50%);
+  bottom: 435px;
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
+  animation-delay: 18s; /* Delay selama 3 detik */
+}
+
+@keyframes fadeIn {
+  0% {
+    visibility: visible;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.btn-sunset:hover {
+  background-color: #af6024;
+}
+
+.js-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #202124;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.js-preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@-webkit-keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+    transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+    transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+    transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+    transform: translateX(-31px);
+  }
+}
+
+.preloader-inner {
+  position: relative;
+  width: 142px;
+  height: 40px;
+  background: #202124;
+}
+
+.preloader-inner .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: #c675ec;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+  animation: dot 2.8s infinite;
+}
+
+.preloader-inner .dots {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+  animation: dots 2.8s infinite;
+}
+
+.preloader-inner .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #c675ec;
+  border-radius: 50%;
+}

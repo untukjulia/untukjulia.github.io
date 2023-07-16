@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Momen Kita</title>
+    <!--
+
+TemplateMo 548 Training Studio
+
+https://templatemo.com/tm-548-training-studio
+
+-->
+    <!-- Additional CSS Files -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css" />
+
+    <link rel="stylesheet" href="assets/css/templatemo-training-studio.css" />
+    <link rel="stylesheet" href="dialog.css" />
+    <style>
+      #play-button {
+        display: none;
+      }
+    </style>
+  </head>
+  <script>
+    function redirectBack() {
+      var newTab = window.open(href="klaimhadiah.html", "_blank");
+      newTab.focus();
+      window.location.href = window.location.href; // Mengarahkan kembali ke halaman asal
+    }
+  </script>
+  <audio id="background-music" src="https://parwatabayu.github.io/music/angel-2.mp3" loop></audio>
+
+  <button id="play-button">Putar Musik Latar Belakang</button>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var playButton = document.getElementById("play-button");
+      var audio = document.getElementById("background-music");
+      
+      var clickEvent = new Event("click");
+      playButton.dispatchEvent(clickEvent); // Memicu peristiwa klik otomatis pada button saat halaman dimuat
+      
+      playButton.addEventListener("click", function() {
+        audio.play();
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var button = document.getElementById("play-button");
+      button.click();
+    });
+  </script>
+  
+  <dialog id="dialog" style="display: none">
+    <img
+      src="images/pesanhadiah.jpeg"
+      alt="Gambar"
+      style="max-width: 100%; max-height: 100%; border-radius: 31px; margin: 0"
+    />
+    <p style="margin-bottom: 23px; margin-top: 20px">
+      Hai ayang. Sebelum klaim hadiah, tuliskan dulu harapan ayang dibawah ya
+    </p>
+  
+    <form action="https://getform.io/f/98a312dd-1776-45a8-ae62-13e63b4c9eb9" method="POST">
+      <textarea
+        name="message"
+        id="pesanBox"
+        style="
+          margin-bottom: 11px;
+          width: 100%;
+          height: 100px;
+          resize: none;
+          font-size: 14px;
+          border-radius: 10px;
+          border: 1.5px solid #ccc; /* Border saat tidak dipilih */
+        "
+        onblur="this.style.border='1.5px solid #ccc';"
+      ></textarea>
+  
+      <button type="submit" style="margin-bottom: 11px" id="playButton" class="primary" onclick="redirectBack()">
+        Klaim Hadiah
+      </button>
+    </form>
+  </dialog>
+  
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav class="main-nav">
+              <!-- ***** Logo Start ***** -->
+              <a href="momenkita.html" class="logo">Momen<em> Kita</em></a>
+              <!-- ***** Logo End ***** -->
+              <!-- ***** Menu Start ***** -->
+              <ul class="nav"></ul>
+              <a class="menu-trigger">
+                <span>Menu</span>
+              </a>
+              <!-- ***** Menu End ***** -->
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div class="main-banner" id="top">
+      <video autoplay muted loop id="bg-video">
+        <source src="assets/images/Video-HBD.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+        <div class="caption">
+          <h6>ni made julia setiawati, 17 juli 2023</h6>
+          <h2>happy birthday sayang</h2>
+          <div class="main-button scroll-to-section">
+            <a href="#" onclick="openDialog()">Buka Hadiah</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; 2023 - Bayu Parwata</p>
+
+            <!-- You shall support us a little via PayPal to info@templatemo.com -->
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/mixitup.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+    
+    <script>
+      function openDialog() {
+        var dialog = document.getElementById("dialog");
+        dialog.style.display = "block";
+        dialog.showModal();
+      }
+
+      function closeDialog() {
+        var dialog = document.getElementById("dialog");
+        dialog.style.display = "none";
+        dialog.close();
+      }
+    </script>
+    
+  </body>
+</html>

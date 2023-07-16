@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+    initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="sunset.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sunset untuk ayang</title>
+    <style>
+      #play-button {
+        display: none;
+      }
+    </style>
+  </head>
+  <audio id="background-music" src="https://parwatabayu.github.io/music/angel-2.mp3" loop></audio>
+
+  <button id="play-button">Putar Musik Latar Belakang</button>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var playButton = document.getElementById("play-button");
+      var audio = document.getElementById("background-music");
+      
+      var clickEvent = new Event("click");
+      playButton.dispatchEvent(clickEvent); // Memicu peristiwa klik otomatis pada button saat halaman dimuat
+      
+      playButton.addEventListener("click", function() {
+        audio.play();
+      });
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var button = document.getElementById("play-button");
+      button.click();
+    });
+  </script>
+  
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="js-preloader" class="js-preloader">
+      <div class="preloader-inner">
+        <span class="dot"></span>
+        <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    <div class="scene">
+      <div class="sky">
+        <div class="text">Ayang kan suka banget lihat sunset, tapi belum pernah sempat liat langsung, dihari spesial ini lihatlah sunset ini dulu ya, sebelum kita lihat beneran
+        </div>
+        <div class="text2">Indah kan warnanya ayang, nanti kita lihat warna yang seindah ini secara langsung ya
+        </div>
+        <a href="momenkita.html" class="btn-sunset">Lanjutkan</a>
+        <div class="sun"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+      </div>
+      <div class="ocean"></div>
+    </div>
+    <script src="script.js"></script>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Plugins -->
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/imgfix.min.js"></script>
+    <script src="assets/js/mixitup.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <!-- Global Init -->
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+      var stars = document.querySelectorAll(".star");
+      stars.forEach((star) => {
+        star.style.position = "absolute";
+        star.style.top = Math.floor(Math.random() * innerHeight) + "px";
+        star.style.left = Math.floor(Math.random() * innerWidth) + "px";
+      });
+    </script>
+  </body>
+</html>
